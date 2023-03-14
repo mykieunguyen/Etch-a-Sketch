@@ -7,13 +7,12 @@ for (let column = 1; column <= 16; column++) {
     // create outer div to each store 16 squares
     let outerDiv = document.createElement('div');
     outerDiv.classList.add('outerDiv')
-    
+
     // for loop to create rows 
     for (let row = 1; row <= 16; row++ ) {
         let createDiv = document.createElement('div');
-        // Styling
-        createDiv.classList.add('squares');
-        createDiv.style.backgroundColor = "red";
+        // Add class to newly created div 
+        createDiv.classList.add('innerDiv');
         // Add div to container
         outerDiv.appendChild(createDiv);
     }

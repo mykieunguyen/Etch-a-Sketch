@@ -7,12 +7,15 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
 }
 
+.outerDiv {
+    display: flex;
+    flex-direction: column;
+}
 
-.squares {
-    width: 20px;
-    height: 20px;
-    border: solid 1px;
+.innerDiv {
+    width: 32px;
+    height: 32px;
+    border: 0.5px solid;
 }
