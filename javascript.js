@@ -2,11 +2,15 @@
 const container = document.querySelector('.container');
 // Selecting for grid size button
 const gridSize = document.querySelector('.gridSize');
+// Selecting for grid lines button
+const gridLineButton = document.getElementById('line');
 
 // Function to handle square color change
 function paintBrush(event) {
-    const square = event.target;
-    square.style.backgroundColor = 'black';
+    let square = event.target;
+    if (square.className === 'innerDiv') {
+        square.style.backgroundColor = 'black';
+    }
 }
 
 // Function to clear Container 
@@ -55,3 +59,34 @@ gridSize.addEventListener('click', ()=> {
     gridSizeGenerator(gridNumber);
 })
 
+
+// Toggling Grid Line ON and OFF 
+// Function to toggle grid line OFF 
+function gridLineOff() {
+    let squares = document.querySelectorAll('.innerDiv');
+
+   squares.forEach((square) => {
+    square.style.border = 'none';
+   });  
+}
+
+// Function to toggle grid line ON
+function gridLineON() {
+    let squares = document.querySelectorAll('.innerDiv');
+
+   squares.forEach((square) => {
+    square.style.border = '.3px solid rgba(191,191,191, .7)';
+   });  
+}
+
+// Function that executes when gridLineButton is pushed
+function gridLine() {
+    if(gridLineButton.value === 'OFF') {
+        gridLineOff();
+        gridLineButton.value = 'ON';
+    }
+    else if (gridLineButton.value ==="ON") {
+        gridLineON();
+        gridLineButton.value = 'OFF'
+    }
+}
