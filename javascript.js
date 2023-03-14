@@ -1,10 +1,9 @@
-
 // Selecting container storing 16x16 grid
 const container = document.querySelector('.container');
 // Selecting for grid size button
 const gridSize = document.querySelector('.gridSize');
 
-// Create a function to handle square color change
+// Function to handle square color change
 function paintBrush(event) {
     const square = event.target;
     square.style.backgroundColor = 'black';
@@ -46,7 +45,13 @@ gridSizeGenerator(16);
 // Ask user for their desired grid size + regenerate grid 
 gridSize.addEventListener('click', ()=> {
     let gridNumber;
-    gridNumber = prompt("What is your desired sketchpad size? Enter a value from 0 - 100");
+    // check if gridNumber is a valid value
+    do {
+        gridNumber = prompt("What is your desired sketchpad size? Enter a value from 0 - 100");
+        Number(gridNumber);
+    }
+    while(gridNumber > 100 || gridNumber < 0 || isNaN(gridNumber));
+
     gridSizeGenerator(gridNumber);
 })
 
