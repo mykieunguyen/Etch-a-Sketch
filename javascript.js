@@ -168,7 +168,6 @@ rainbowBrushButton.addEventListener('click', rainbowBrush);
 
 
 // Clear board 
-
 clearSketchButton.addEventListener('click', () => {
     let squares = document.querySelectorAll('.innerDiv');
 
