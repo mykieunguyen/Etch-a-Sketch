@@ -10,6 +10,8 @@ const eraserButton = document.querySelector('.eraserButton');
 const blackBrushButton = document.querySelector('.blackBrushButton');
 // Selecting for rainbow paint brush button 
 const rainbowBrushButton = document.querySelector('.rainbowBrushButton');
+// Selecting for clear board button 
+const clearSketchButton = document.querySelector('.clearSketchButton');
 
 // Function to handle square color change
 function paintBrush(event) {
@@ -163,3 +165,14 @@ function rainbowBrush() {
 }
 
 rainbowBrushButton.addEventListener('click', rainbowBrush);
+
+
+// Clear board 
+
+clearSketchButton.addEventListener('click', () => {
+    let squares = document.querySelectorAll('.innerDiv');
+
+    squares.forEach((square) => {
+     square.style.backgroundColor = '#FEFCFF';
+    }); 
+})
