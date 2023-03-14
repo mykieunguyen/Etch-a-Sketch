@@ -1,8 +1,29 @@
 body {
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    gap: 300px;
+    background-color: #E9D9D4;
+    margin: 0px;
+}
+
+.top {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFCFF;
+    color:rgba(00,00,00,.6);
+}
+
+.middle {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100vw;
 }
 
 .container {
@@ -11,6 +32,8 @@ body {
     flex-shrink: 0;
     width: 512px;
     height: 512px;
+    background-color: #FEFCFF;
+    border: 1px rgba(00,00,00,.6) solid;
 }
 
 .outerDiv {
@@ -23,5 +46,17 @@ body {
 .innerDiv {
     flex-grow: 1;
     flex-shrink: 1;
-    border: 0.5px solid;
+    border: .3px solid rgba(191,191,191, .7);
+}
+
+.buttons {
+    width: 80px;
+    height: 50px;
+}
+
+button {
+    background-color: rgb(243, 207, 198);
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px rgba(00,00,00,.5) solid;
 }
