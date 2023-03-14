@@ -8,6 +8,8 @@ const gridLineButton = document.getElementById('line');
 const eraserButton = document.querySelector('.eraserButton');
 // Selecting for Black Pain Brush Button
 const blackBrushButton = document.querySelector('.blackBrushButton');
+// Selecting for rainbow paint brush button 
+const rainbowBrushButton = document.querySelector('.rainbowBrushButton');
 
 // Function to handle square color change
 function paintBrush(event) {
@@ -119,3 +121,45 @@ function blackBrush() {
 }
 
 blackBrushButton.addEventListener('click', blackBrush);
+
+// Function to change to rainbow colored pant brush 
+// Function to randomize rainbow color selector 
+function rainbowColorSelector() {
+    let numberGenerator = Math.floor(Math.random()*8);
+
+    let color;
+    if (numberGenerator === 0) {
+        color = 'red';
+    }
+    else if (numberGenerator === 1) {
+        color = 'orange';
+    }
+    else if (numberGenerator === 2) {
+        color = 'yellow';
+    }
+    else if (numberGenerator === 3) {
+        color = 'green';
+    }
+    else if (numberGenerator === 4) {
+        color = 'blue';
+    }
+    else if (numberGenerator === 5) {
+        color = 'indigo';
+    }
+    else {
+        color = 'violet';
+    }
+    return color;
+}
+
+function rainbowBrush() {
+    container.addEventListener('mouseover', (event) => {
+        let square = event.target;
+        if (square.className === 'innerDiv') {
+            let randomColor = rainbowColorSelector();
+        square.style.backgroundColor = randomColor;
+        }
+    });  
+}
+
+rainbowBrushButton.addEventListener('click', rainbowBrush);
