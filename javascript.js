@@ -6,6 +6,8 @@ const gridSize = document.querySelector('.gridSize');
 const gridLineButton = document.getElementById('line');
 // Selecting for Eraser button
 const eraserButton = document.querySelector('.eraserButton');
+// Selecting for Black Pain Brush Button
+const blackBrushButton = document.querySelector('.blackBrushButton');
 
 // Function to handle square color change
 function paintBrush(event) {
@@ -104,3 +106,16 @@ function eraserBrush() {
 }
 
 eraserButton.addEventListener('click', eraserBrush);
+
+
+// Function to change back to black paint brush
+function blackBrush() {
+    container.addEventListener('mouseover', (event) => {
+        let square = event.target;
+        if (square.className === 'innerDiv') {
+        square.style.backgroundColor = 'black';
+        }
+    });  
+}
+
+blackBrushButton.addEventListener('click', blackBrush);
