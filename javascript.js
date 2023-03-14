@@ -62,7 +62,7 @@ gridSize.addEventListener('click', ()=> {
         gridNumber = prompt("What is your desired sketchpad size? Enter a value from 0 - 100");
         Number(gridNumber);
     }
-    while(gridNumber > 100 || gridNumber < 0 || isNaN(gridNumber));
+    while(gridNumber > 100 || gridNumber <= 0 || isNaN(gridNumber));
 
     gridSizeGenerator(gridNumber);
 })
@@ -83,7 +83,7 @@ function gridLineON() {
     let squares = document.querySelectorAll('.innerDiv');
 
    squares.forEach((square) => {
-    square.style.border = '.3px solid rgba(191,191,191, .7)';
+    square.style.border = '1px solid rgb(233, 217, 212, .5)';
    });  
 }
 
