@@ -18,3 +18,9 @@ for (let column = 1; column <= 16; column++) {
     }
     container.appendChild(outerDiv);
 }
+
+// Add event Listenern to change div color when mouse hovers over it. 
+container.addEventListener('mouseover', (event) => {
+    const square = event.target;
+    square.style.backgroundColor = 'black';
+})
