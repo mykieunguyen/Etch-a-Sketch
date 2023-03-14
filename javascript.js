@@ -10,12 +10,11 @@ for (let column = 1; column <= 16; column++) {
 
     // for loop to create rows 
     for (let row = 1; row <= 16; row++ ) {
-        let createDiv = document.createElement('div');
+        let innerDiv = document.createElement('div');
         // Add class to newly created div 
-        createDiv.classList.add('innerDiv');
+        innerDiv.classList.add('innerDiv');
         // Add div to container
-        outerDiv.appendChild(createDiv);
+        outerDiv.appendChild(innerDiv);
     }
     container.appendChild(outerDiv);
 }
-
