@@ -1,21 +1,27 @@
 body {
     height: 80vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 .container {
     display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 512px;
+    height: 512px;
 }
 
 .outerDiv {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .innerDiv {
-    width: 32px;
-    height: 32px;
+    flex-grow: 1;
+    flex-shrink: 1;
     border: 0.5px solid;
 }
