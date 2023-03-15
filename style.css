@@ -11,18 +11,29 @@ body {
     margin: 0px;
 }
 
+/* TOP */
 .top {
     width: 100vw;
     height: 20vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #FEFCFF;
-    color:rgba(00,00,00,.6);
-    font-size: 60px;
-    font-family: 'Rampart One', cursive;
 }
 
+#title {
+    color:rgba(00,00,00,.6);
+    font-size: 120px;
+    font-family: 'Rampart One', cursive;
+    padding-top: 30px;
+}
+
+.instructions {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* MIDDLE */
 .middle {
 display: flex;
 flex-direction: row;
@@ -81,7 +92,7 @@ button,input {
     color: rgb(233, 217, 212);
 }
 
-
+/* BOTTOM */
 .bottom {
     margin-top: 200px;
 }
