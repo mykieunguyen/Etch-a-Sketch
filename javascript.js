@@ -131,25 +131,25 @@ function rainbowColorSelector() {
 
     let color;
     if (numberGenerator === 0) {
-        color = 'red';
+        color = '#8F423B';
     }
     else if (numberGenerator === 1) {
-        color = 'orange';
+        color = '#FF9F5C';
     }
     else if (numberGenerator === 2) {
-        color = 'yellow';
+        color = '#F2DAB1';
     }
     else if (numberGenerator === 3) {
-        color = 'green';
+        color = '#9BA986';
     }
     else if (numberGenerator === 4) {
-        color = 'blue';
+        color = '#7296A4';
     }
     else if (numberGenerator === 5) {
-        color = 'indigo';
+        color = '#558D97';
     }
     else {
-        color = 'violet';
+        color = '#919BC9';
     }
     return color;
 }
