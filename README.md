@@ -1,2 +1,2 @@
 # Etch-a-Sketch
-Implement a browser based sketch pad. 
+See it live: https://mykieunguyen.github.io/Etch-a-Sketch/
